@@ -1,0 +1,38 @@
+@import url('header.css');
+@import url('footer.css');
+@import url('../fonts/zag-regular-webfontkit/stylesheet.css');
+@import url('sticky-footer.css');
+
+body {
+    font-size:16px;
+    font-family:Helvetica, Arial, clean, sans-serif;
+}
+
+div#main {
+    margin-left:auto;
+    margin-right:auto;
+    max-width:600px;
+    padding-top:15px;
+}
+
+div#main a {
+    text-decoration:none;
+    color:#228;
+}
+
+div#main a:visited {
+    color:#669;
+}
+
+div#main ul {
+    margin:25px 20px 0;
+    list-style:none;
+}
+
+div#main li {
+    margin:15px;
+}
+
+p {
+    margin:10px;
+}

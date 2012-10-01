@@ -1,0 +1,18 @@
+footer {
+    width:100%;
+}
+
+footer ul#somia {
+    list-style-type:none;
+    overflow:hidden;
+    padding-right:20px;
+}
+
+footer ul#somia li {
+    float:right;
+    padding:5px 5px 0px;
+}
+
+footer ul#somia li img {
+    height:40px;
+}

@@ -1,0 +1,37 @@
+header {
+    font-family:"ZagRegular";
+}
+
+header a {
+    text-decoration:none;
+}
+
+header h1 {
+    color:#224;
+    font-size:48px;
+    font-weight:normal;
+    margin:0px auto;
+    min-width:680px;
+    width:80%;
+}
+
+header h1 a {
+    color:inherit;
+}
+
+header ul#menu {
+    border-bottom:2px solid #AAA;
+    font-size:32px;
+    list-style-type: none;
+    margin:0px;
+    overflow: hidden;
+}
+
+header ul#menu li {
+    float:right;
+    padding:0px 25px 5px;
+}
+
+header ul#menu li a {
+    color:#666;
+}

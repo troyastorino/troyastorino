@@ -1,0 +1,36 @@
+/*sticky footer hack
+http://www.cssstickyfooter.com*/
+* {
+    margin:0;
+    padding:0;
+}
+
+html, body {
+    height: 100%;
+}
+
+div#container {
+    min-height:100%;
+}
+
+div#main {
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding-bottom: 50px; /*must be same height as footer*/
+}
+
+footer {
+    position:relative;
+    margin-top:-50px; /*negative footer height*/
+    height:50px; /*footer height*/
+    clear:both;
+}
+
+/*Opera Fix*/
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;
+}
