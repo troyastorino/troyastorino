@@ -1,2 +1,2 @@
-Solutions to little problems I've found while programming. Hopefully other 
-people will see them and avoid pulling hair out.
+Solutions to little problems I've had while programming. Hopefully they can 
+help keep other people from pulling their hair out.

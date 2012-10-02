@@ -4,4 +4,5 @@
                            [noir "1.3.0-beta3"]
                            [enlive "1.0.1"]
                            [markdown-clj "0.9.8"]]
-            :main troyastorino.server)
+            :main troyastorino.server
+            :min-lein-version "2.0.0")
