@@ -13,7 +13,7 @@ site has.
 Now for a little about myself. I'm 21 years old, a senior at MIT trying to learn 
 how to build intelligence. I'm majoring in Aerospace Engineering and Physics, 
 and love programming in beautiful languages (_\*cough\*_ 
-Clojure(http://clojure.org/) _\*cough\*_.) I'm living 
+[Clojure](http://clojure.org/) _\*cough\*_.) I'm living 
 [in Boston](https://maps.google.com/?q=282 Newbury St, #12A, Boston, MA 02116) 
 and loving it (although I did live in [Baker House](https://baker.mit.edu/) and 
 I do miss it). I love games, particularly sports: I play 
