@@ -2,11 +2,11 @@
 
 _Note: I'm running OS X 10.8_
 
-So, I haven't used Heroku in a while, but in remaking my website I decided I'd
-just run it from Heroku for the awesome convenience. Everything was working fine
-at first, but suddenly when I tried to add my domain name to the app heroku
-failed. In fact, every heroku command I entered at the command line failed with
-the same error message:
+So, I haven't used Heroku in a while, but in remaking my website I decided I'd 
+just run it from Heroku for the awesome convenience. Everything was working fine 
+at first, but suddenly when I tried to add my domain name to the app heroku 
+failed. In fact, every heroku command I entered at the command line failed with 
+the same error message: 
 
  ```bash
  /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require': no such file to load -- netrc (LoadError)
@@ -25,9 +25,9 @@ the same error message:
 	from /usr/bin/heroku:19
  ```
  
-After digging around for a little while, it became apparent that the only
-solution to this issue was to reinstall the heroku toolbelt. First, I needed to
-remove the Heorku client directory:
+After digging around for a little while, it became apparent that the only 
+solution to this issue was to reinstall the heroku toolbelt. First, I needed to 
+remove the Heorku client directory: 
 
     $ rm -r ~/.heroku/client
     
