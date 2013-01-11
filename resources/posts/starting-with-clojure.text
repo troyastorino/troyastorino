@@ -1,0 +1,131 @@
+ 
+Now, you should install the build tool for Clojure, Leiningen.  There is another one, Cake, but it is going to be merging with Leiningen soon.  Follow the instructions on the github page.
+
+Finally, to get
+SLIME (Superior LIsp evaluation Mode for Emacs)  working with Clojure, install the Leiningen swank-clojure plugin.  Now, you can simply run `M-x clojure-jack-in` inside of a Clojure project in Emacs in order to run an interactive REPL in Emacs!
+
+
+# Getting Started with Clojure #
+## Or, setting up a fully functional Emacs development environment for Clojure from scratch ##
+
+Hello world!  For my first blog post, I'm going to write about
+something I've been promising myself I would ever since I decided to
+build a personal website: getting started with Clojure.n
+
+In case you didn't know, [Clojure][clojure] is awesome. It's a
+(relatively) new dialect of Lisp that runs on the JVM. This means that
+it has the awesome expressive power of Lisps *and* it runs everywhere
+Java runs (aka everywhere) with native access to Java libraries.
+Clojure is also <strike>a purely</strike> an almost purely functional
+language, and so makes understanding program execution much easier.
+Its use of immutable datatypes and its system of refs, vars, atoms,
+and agents takes the headache out of concurrent state management. But
+if you're looking for how to get started with Clojure, you likely
+already know how cool it is.
+
+When I decided I wanted to learn Clojure, I found a ton of options for
+development environments. I would have loved to have someone had just
+told me what to do to go from no setup to developing in Clojure, and
+with a powerful enough setup that once I learned it, I could hope to
+keep on using it. This post is directed at people who have 0
+experience with Clojure and haven't committed to a development
+environment. If you do have an IDE/editor that you're set on using,
+[this list][clojure-tools] will probably give you a way to write Clojure in it. I
+decided to go with Emacs since most Clojure hackers (and Lisp hackers
+in general) use it, and it made sense that it's more natural to edit
+Lisp in an environment built with Lisp. Although there is a
+substantial learning cure, it isn't nearly as bad as it is made out to
+be, since much of the complexity of Emacs is hidden from you if you
+don't try to use it. This post won't pretend to give the "best"
+environment for developing Clojure, but just what I've eventually come
+to use.
+
+### Getting and Learning Emacs ###
+
+First, you need to get Emacs. Emacs 24 has some really nice
+enhancements, and although it hasn't been officially released yet,
+it's definitely ready for use. You can find binaries for your
+operating system below:
+
+* [Linux (Debian)][emacs24-linux]
+* [OS X][emacs24-osx]
+* [Windows][emacs24-windows] 
+
+You can find more details and options for getting Emacs 24
+[here][batsov-getting-started-with-emacs], and of course could always
+compile from source.
+
+To learn the basics of how to get around Emacs, I hear the Emacs
+tutorial is great, and if you have the patience to go through the
+whole thing I commend you. To access the tutorial in Emacs you type
+`C-h t`. Commands in Emacs are typically demarcated this way. `C-h t`
+translates to: hold down the `Control` and `h` keys at the same time, release
+them, and then press the `t` key. `C` maps to the CONTROL key, and `M`
+maps to the Meta (Alt on most keyboards) key. I've found
+[this list][emacs-as-ide] of commands to be a helpful reference.
+
+To make your Emacs experience nicer from the get-go, I'd recommend
+getting technomancy's [emacs-starter-kit][emacs-starter-kit]. It has
+worked very nicely for me, and is designed to be modular. There are
+straightforward instructions on the GitHub page, but I'll spell it out
+in case you haven't used Emacs before.
+
+1. Type `C-x C-f ~/.emacs.d/init.el` to open (in this case create,
+since it's a new file) your init.el file.
+
+2. Paste the following code snippet in there to add the repository
+that hosts starter-kit (`C-y` is the equivalent of pasting in Emacs,
+but if you have a Mac `⌘-v` will still work):
+
+        (require 'package)
+        (add-to-list 'package-archives
+                     '("marmalade" . "http://marmalade-repo.org/packages/") t)
+        (package-initialize)
+        
+3. Enter the following (you can used `Tab` to autocomplete, and `RET`
+means hit `Enter`/`Return`):
+
+        M-x package-refresh-contents
+        M-x install-package RET starter-kit
+        
+While we're installing packages, we should install clojure-mode and
+starter-kit lisp. So, type the following
+
+    M-x install-package RET starter-kit-lisp
+    M-x install-package RET clojure-mode
+
+Emacs is now finally configured! If in the future you want to browse
+packages, you can enter `M-x package-list-packages` to pull up the
+package list. To install any of the packages, enter `I` at the
+beginning of the lines the packages you want are on, and then type `x`
+to install them. You'll also want to keep in mind that all the
+customization that people talk about putting in their .emacs file
+you'll want to put in you init.el file.
+
+### Installing Leiningen ###
+
+Now you need to download Leiningen. This is the most popular
+built tool for Clojure (Cake, the other common build tool, is merging
+with Leiningen). There are good installation instructions on
+the [GitHub page][lein], but I'll copy them here for convenience. 
+
+
+Next, to get a REPL in Emacs, run from a shell: lein
+plugin install "swank-clojure 1.3.3" Now,
+
+[clojure]: http://clojure.org/
+[clojure-tools]: http://dev.clojure.org/display/doc/Clojure+Tools
+[batsov-getting-started-with-emacs]: http://batsov.com/articles/2011/10/09/getting-started-with-emacs-24/
+[emacs-as-ide]: http://deep.syminet.com/emacside.html
+[emacs24-linux]: http://emacs.naquadah.org/
+[emacs24-osx]: http://emacsformacosx.com/builds
+[emacs24-windows]: http://code.google.com/p/emacs-for-windows/updates/list
+[emacs-starter-kit]: https://github.com/technomancy/emacs-starter-kit
+[lein]: https://github.com/technomancy/leiningen
+
+
+
+
+
+
+

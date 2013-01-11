@@ -11,4 +11,9 @@ pictures. Google Docs was great for working remotely and typing, but sketches
 are the natural language of brainstorming. I couldn't find a product that did
 what I wanted, so I decided I wanted to build it.
 
+Andrew Dorne and I applied to the [StartLabs](www.startlabs.org) C2C program.
+Along with [Paulina Mustafa](http://web.mit.edu/pmustafa/www/), we worked to
+turn Collabow into product. 
+
+
 ## Lessons learned

@@ -1,2 +1,2 @@
-Below is (or will be) a varied little collection of writings. A place for 
-thoughts.
+This is a little empty right now, but I'm sure that soon some of the thoughts in 
+my head will make it onto this page. 

@@ -1,16 +1,8 @@
-Hi, my name is Troy Astorino, welcome to my homepage!
+Hi, my name is Troy Astorino, welcome to my homepage! Here I keep a record of 
+some of the things I've done, both for myself to reflect on and to show the wider 
+world.  
 
-This website exists for two different audiences: myself and the world. 
-Keeping a record of what I've done forces me to reflect on my successes and 
-mistakes in a structured way, and so enables me to learn and grow from my past. 
-This record keeping is there for a similar reason: I have solved so many 
-computing by finding solutions on various blogs around the internet, and I want 
-to make sure I'm there for those people struggling like me. From another 
-viewpoint, this website has to showcase what I've done so that when I apply for 
-positions, it's here. So, please excuse the mixed presentation that content on 
-site has. 
-
-Now for a little about myself. I'm 21 years old, a senior at MIT trying to learn 
+Now for a little about myself. I'm 22 years old, a senior at MIT trying to learn 
 how to build intelligence. I'm majoring in Aerospace Engineering and Physics, 
 and love programming in beautiful languages (_\*cough\*_ 
 [Clojure](http://clojure.org/) _\*cough\*_.) I'm living 

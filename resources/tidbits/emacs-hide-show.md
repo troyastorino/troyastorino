@@ -22,7 +22,7 @@ commands I find most useful are:
 Of course, I wanted to automatically enable this minor mode in the editing major 
 modes that I'm often in, so I added the following to my initialization file: 
 
-```elisp
+```
 (defvar code-editing-mode-hooks '(c-mode-common-hook
                                   clojure-mode-hook
                                   emacs-lisp-mode-hook
