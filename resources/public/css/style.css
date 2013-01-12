@@ -33,6 +33,15 @@ div#main li {
     margin:15px;
 }
 
+div#main img {
+    max-width:500px;
+}
+
+div.img-container{
+    max-width:600px;
+    text-align:center;
+}
+
 p {
     margin:10px;
 }
