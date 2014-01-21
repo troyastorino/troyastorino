@@ -1,10 +1,24 @@
 (ns troyastorino.server
-  (:require [noir.server :as server]))
+  (:require [compojure.route :as route]
+            [noir.util.middleware :as middleware])
+  (:use [compojure.core :only [GET]]
+        [troyastorino.views.views :only [intro-page resource-page]]))
 
-(server/load-views-ns 'troyastorino.views)
+(def public-routes
+  [(route/resources "/")])
 
-(defn -main [& m]
-  (let [mode (keyword (or (first m) :dev))
-        port (Integer. (get (System/getenv) "PORT" "8080"))]
-    (server/start port {:mode mode
-                        :ns 'troyastorino})))
+(def app-routes
+  [(GET "/" [] (intro-page "welcome"))
+   (GET "/purpose" [] (intro-page "purpose" :title "purpose"))
+   (GET "/projects" [] (intro-page "projects" :title "projects"))
+   (GET "/projects/:name" [name] (resource-page "projects" name))
+   (GET "/thoughts" [] (intro-page "thoughts" :title "thoughts"))
+   (GET "/thoughts/:name" [name] (resource-page "thoughts" name))
+   (GET "/tidbits" [] (intro-page "tidbits" :title "tidbits"))
+   (GET "/tidbits/:name" [name] (resource-page "tidbits" name))])
+
+
+(def app
+  (middleware/app-handler
+   (concat public-routes app-routes
+           [(route/not-found "Not Found")])))
