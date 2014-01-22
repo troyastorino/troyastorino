@@ -7,14 +7,6 @@
 (def public-routes
   [(route/resources "/")])
 
-;; (def syntax-highlighting-libs
-;;   {:scripts ["//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
-;;              "/lib/prettify/prettify.js"
-;;              "/lib/prettify/lang-clj.js"
-;;              "/lib/prettify/lang-lisp.js"
-;;              "/js/pretty-code.js"]
-;;    :stylesheets ["/lib/prettify/prettify.css"]})
-
 (def syntax-highlighting-libs
   {:scripts ["//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
              "/lib/sh/core.js"
