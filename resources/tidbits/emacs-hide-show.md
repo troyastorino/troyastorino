@@ -22,7 +22,7 @@ commands I find most useful are:
 Of course, I wanted to automatically enable this minor mode in the editing major 
 modes that I'm often in, so I added the following to my initialization file: 
 
-```
+```lisp
 (defvar code-editing-mode-hooks '(c-mode-common-hook
                                   clojure-mode-hook
                                   emacs-lisp-mode-hook
@@ -33,6 +33,8 @@ modes that I'm often in, so I added the following to my initialization file:
                                   sh-mode-hook))
 
 ;; Add a hs-minor-mode hook to code editing major modes
+
 (dolist (mode code-editing-mode-hooks)
   (add-hook mode 'hs-minor-mode))
+  
 ```

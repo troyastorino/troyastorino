@@ -8,7 +8,9 @@ Unfortunately, I can't do this for my project. The Clojure component I'm buildin
  
 Luckily, I found a hack that still lets you add dependencies for jars by their relative location in the filesystem.  By using `:resource-paths`, you can add the jars you need to the classpath. I put the jars I needed into a "lcm-jars" directory relative to my classpath, and added the following line to my `project.clj` file:
 
-```
+```clojure
   :resource-paths ["lcm-jars/*"]
+  
 ```
+
 The wildcard character `*` adds all the jars inside the folder to the classpath. Other folders or jars could be added to the resource-paths vector, as long as all the paths are relative to the project root directory.

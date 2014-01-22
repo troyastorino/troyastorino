@@ -23,13 +23,17 @@ the same error message:
 	from /Library/Ruby/Gems/1.8/gems/heroku-2.15.1/bin/heroku:6
 	from /usr/bin/heroku:19:in `load'
 	from /usr/bin/heroku:19
+    
  ```
  
 After digging around for a little while, it became apparent that the only 
 solution to this issue was to reinstall the heroku toolbelt. First, I needed to 
 remove the Heorku client directory: 
 
-    $ rm -r ~/.heroku/client
+```bash
+$ rm -r ~/.heroku/client
+
+```
     
 Next, I [downloaded the Heroku toolbelt here](https://toolbelt.heroku.com/).
 

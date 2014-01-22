@@ -5,7 +5,7 @@
                            [lib-noir "0.7.9"]
                            [ring-server "0.3.0"]
                            [enlive "1.1.5"]
-                           [markdown-clj "0.9.9"]]
+                           [markdown-clj "0.9.41"]]
             :plugins [[lein-ring "0.8.10"]]
             :ring {:handler troyastorino.server/app}
             :main troyastorino.server

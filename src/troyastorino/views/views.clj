@@ -1,6 +1,6 @@
 (ns troyastorino.views.views
   (:use [troyastorino.views.common :only [page template-path]]
-        [markdown :only [md-to-html-string]]
+        [markdown.core :only [md-to-html-string]]
         [net.cgrand.enlive-html]
         [clojure.java.io :only [file]])
   (:require [clojure.string :as string]))
@@ -67,39 +67,9 @@
   (apply page (concat (md-to-html (markdown-path page-name))
                       (html-links page-name)) options))
 
-(defn resource-page [resource name]
-  (page (wrap-images (md-to-html (str "resources/" resource "/" name ".md")))
-        :title (str "projects - " (human-friendly-title name))))
-
-;; (defpage "/" []
-;;   (intro-page "welcome"))
-
-;; (defpage "/purpose" []
-;;   (intro-page "purpose" :title "purpose"))
-
-;; (defpage "/projects" []
-;;   (intro-page "projects" :title "projects"))
-
-;; (defpage "/projects/:name" {:keys [name]}
-;;   (page (wrap-images (md-to-html (str "resources/projects/" name ".md")))
-;;         :title (str "projects - " (human-friendly-title name))))
-
-;; (defpage "/thoughts" []
-;;   (intro-page "thoughts" :title "thoughts"))
-
-;; (defpage "/thoughts/:name" {:keys [name]}
-;;   (page (wrap-images (md-to-html (str "resources/thoughts/" name ".md")))
-;;         :title (str "thoughts - " (human-friendly-title name))))
-
-;; (defpage "/tidbits" []
-;;   (intro-page "tidbits" :title "tidbits"))
-
-;; (defpage "/tidbits/:name" {:keys [name]}
-;;   (page (wrap-images (md-to-html (str "resources/tidbits/" name ".md")))
-;;         :title (str "tidbits - " (human-friendly-title name))
-;;         :stylesheets ["/lib/prettify/prettify.css"]
-;;         :scripts ["//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
-;;                   "/lib/prettify/prettify.js"
-;;                   "/lib/prettify/lang-clj.js"
-;;                   "/lib/prettify/lang-lisp.js"
-;;                   "/js/pretty-code.js"]))
+(defn resource-page [resource name & opts]
+  (apply page
+         (wrap-images (md-to-html (str "resources/" resource "/" name ".md")))
+         (apply concat
+                (merge {:title (str "projects - " (human-friendly-title name))}
+                       (apply hash-map opts)))))
