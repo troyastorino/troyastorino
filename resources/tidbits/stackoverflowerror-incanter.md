@@ -1,4 +1,4 @@
-Was getting a StackOverflowError when programming with Incanter and couldn't figure out where it was coming from.  Eventually pinned it down to a reduce call.  Interestingly:
+Was getting a StackOverflowError when programming and couldn't figure out where it was coming from.  Eventually pinned it down to a reduce call.  Interestingly:
 
 ```clojure
 (reduce 
