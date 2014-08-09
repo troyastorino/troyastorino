@@ -1,9 +1,10 @@
-Hi, my name is Troy, and welcome!
+Hi, I'm Troy. Welcome!
 
-I'm a youngster slowly making the transition to adulthood in the wonderful city
-of San Francisco. I'm working to help patients interact with their healthcare via
-[Picnic](http://picnichealth.com/site). We're doing some pretty cool stuff, and
-I'm always happy to talk about it, so feel free to reach out.
+I'm exploring life by adventuring inside and out of the great city of San
+Francisco. I'm a co-founder at [PicnicHeath](http://picnichealth.com). We're
+empowering patients to gain control of medical care, starting with their medical
+records. I'm always more than happy to talk about it, so if you're in the mood
+for getting your ear talked off feel free to reach out.
 
 I got technical (and life) training at MIT. Overall academic goal: learn
 to build intelligence. Still working on it.
